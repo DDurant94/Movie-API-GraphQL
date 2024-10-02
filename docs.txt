@@ -1,5 +1,29 @@
 About:
+    The Movie API in GraphQL has a modular design that allows for scalability and maintainability. This approach makes the code easier to adapt 
+  to any user’s needs by implementing new files into each preexisting folder for new features.
 
+    The Movie API in GraphQL is designed for handling CRUD operations on a movie storage database. Unlike a RESTful API, which uses separate GET, 
+  POST, PUT, and DELETE endpoints, GraphQL uses only POST requests. This allows users to query exactly the information they need in a 
+  straightforward manner, avoiding unnecessary data dumps.
+
+    To interact with this database, create a database and schema in MySQL Workbench. Then, add your password and database name to app.py, run 
+  the application, and visit the Postman link provided in the README.md to add your information.
+
+  File Structure:
+    Models:
+      The Models folder is used for the table and schema outlines for validating and formatting data into the database.
+
+      Schemas:
+        Schemas handle the data and validate it before it is inputted into the database, providing errors when needed.
+
+    Resolvers:
+      The Resolvers folder handles all the queries for the database.
+
+    Utilities:
+      The Utilities folder handles adding, updating, and deleting information within the database.
+
+PIP Install:
+  (pip install Flask Flask-Script Flask-SQLAlchemy Flask-GraphQL graphene graphene-sqlalchemy PyMySQL cryptography python-dotenv)
 
 Questions:
   Our objective is to create a versatile GraphQL API for a Movie Database, enabling users to efficiently manage, explore, and enjoy their movie 
